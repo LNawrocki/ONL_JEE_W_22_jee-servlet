@@ -16,6 +16,13 @@ public class Servlet31 extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setCharacterEncoding(StandardCharsets.UTF_8.name());
         resp.setContentType("text/html;charset=utf8");
-        resp.getWriter().println("Działa");
+        resp.sendRedirect("/test.html");
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setCharacterEncoding(StandardCharsets.UTF_8.name());
+        resp.setContentType("text/html;charset=utf8");
+        resp.getWriter().println("przyszło");
     }
 }
